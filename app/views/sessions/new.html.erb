@@ -1,0 +1,24 @@
+<% provide(:title, "ログイン") %>
+<h1>ログイン</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session) do |f| %>
+
+      <p class='error'>
+      <p class='error'>
+
+      <%= f.label :login_name, 'ユーザーID' %>
+      <%= f.text_field :login_name, class: 'form-control', required: 'required' %>
+      <br>
+
+      <%= f.label :password, 'パスワード' %>
+      <%= f.password_field :password, class: 'form-control', required: 'required' %>
+      <br>
+
+      <%= f.submit "ログインする", class: "btn btn-primary" %>
+
+    <% end %>
+
+  </div>
+</div>
